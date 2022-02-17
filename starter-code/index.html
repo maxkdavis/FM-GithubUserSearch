@@ -8,25 +8,88 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
 
   <title>Frontend Mentor | GitHub user search app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <h2>devfinder</h2>
+  <div id="container">
 
-  Light
-  Dark
+    <div id="title-theme">
+      <h1>devfinder</h1>
+      <div>
+        Light
+        Dark
+      </div>
+    </div>
 
-  Search GitHub username...
-  Search
+    <div id="search-area">
+      <form id="form-search">
+        <label for="username"><img src="assets/icon-search.svg" alt="image of magnifying glass"></label>
+        <input type="text" id="username" placeholder="Search GitHub username..." autocomplete="off">
+        <button>Search</button>
+      </form>
+    </div>
 
-  Joined
+    <div id="profile">
+      <div class="user-description">
+        <div class="avatar-container">
+          <img src="https://avatars.githubusercontent.com/u/583231?v=4" class="avatar" alt="octocat image">
+        </div>
+        <div class="name">
+          <h1 class="user-name">The Octocat</h1>
+          <h3 class="user-login">@octocat</h3>
+          <p class="create-date">Joined 25 Jan 2011</p>
+        </div>
+      </div>
 
-  Repos
-  Followers
-  Following
+      <div class="user-bio">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate in rem laudantium rerum nesciunt nostrum.
+        </p>
+      </div>
 
+      <div class="user-stats">
+        <div class="repos">
+          <p>Repos</p>
+          <p>#</p>
+        </div>
+
+        <div class="followers">
+          <p>Followers</p>
+          <p>#</p>
+        </div>
+
+        <div class="following">
+          <p>Following</p>
+          <p>#</p>
+        </div>
+      </div>
+
+      <div class="user-links">
+        <div class="location">
+          <img src="assets/icon-location.svg" alt="pin location image">
+          <p>San Francisco</p>
+        </div>
+        <div class="website">
+          <img src="assets/icon-website.svg" alt="website link image">
+          <p>https://github.blog.com</p>
+        </div>
+        <div class="twitter">
+          <img src="assets/icon-twitter.svg" alt="twitter logo">
+          <p>Not Available</p>
+        </div>
+        <div class="company">
+          <img src="assets/icon-company.svg" alt="small building icon">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="index.js"></script>
 </body>
 
 </html>

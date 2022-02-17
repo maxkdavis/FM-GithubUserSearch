@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-lightblue: hsl(212, 100%, 50%);
+    --clr-white: hsl(0, 0%, 100%);
+    --ltmode-clr-greyblue: hsl(217, 20%, 51%);
+    --ltmode-clr-navyblue: hsl(217, 35%, 45%);
+    --ltmode-clr-drkgrayishblue: hsl(217, 21%, 21%);
+    --ltmode-clr-lightgray: hsl(227, 100%, 98%);
+    --drkmode-clr-vdrkblue: hsl(220, 40%, 13%);
+    --drkmode-clr-drknavyblue: hsl(222, 41%, 20%);
+}
+
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Space Mono", monospace, sans-serif;
+    background-color: var(--ltmode-clr-lightgray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#container {
+    max-width: 23.5rem; /*376px*/
+    padding: 2rem 1.5rem 0; /* top, left/right, bottom */
+}
+
+#title-theme {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.25rem; /*36px*/
+}
+
+#form-search {
+    background-color: var(--clr-white);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 3.75rem; /*60px*/
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin-bottom: 1rem;
+}
+
+#form-search label {
+    scale: 0.75;
+}
+
+#form-search input {
+    border: none;
+    outline: none;
+    padding: 0;
+    width: 12.25rem; /*200px*/
+}
+
+#form-search input::placeholder {
+    font-family: "Space Mono", monospace, sans-serif;
+    font-size: 13px;
+    color: var(--ltmode-clr-navyblue);
+}
+
+#form-search button {
+    font-family: inherit;
+    padding: 0.75rem 1.125rem;
+    color: var(--clr-white);
+    background-color: var(--clr-lightblue);
+    border: none;
+    border-radius: 5px;
+}
+
+#profile {
+    border-radius: 10px;
+    padding: 2rem 1.5rem 3rem; /*top:32px, left and right: 24px, bottom: 48px*/
+    background-color: var(--clr-white);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.user-description {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    margin-right: 1rem;
+}
+
+.name h1 {
+    font-size: 1rem;
+}
+
+.name h3 {
+    color: var(--clr-lightblue);
+    font-size: 0.8125rem;
+    font-weight: 400;
+}
+
+.name p {
+    color: var(--ltmode-clr-greyblue);
+    font-size: 0.8125rem;
+}
+
+.avatar {
+    width: 100%;
+    border-radius: 50%;
+}
