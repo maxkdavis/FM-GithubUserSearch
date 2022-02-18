@@ -129,3 +129,37 @@ body {
     width: 100%;
     border-radius: 50%;
 }
+
+.user-bio {
+    margin-bottom: 1.5rem;
+}
+
+.user-bio p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--ltmode-clr-navyblue);
+}
+
+.user-stats {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--ltmode-clr-lightgray);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.stats {
+    flex: 1;
+}
+
+.stats h4 {
+    font-size: 0.6875rem;
+    font-weight: 400;
+}
+
+.stats p {
+    font-size: 1rem;
+    font-weight: 700;
+}
