@@ -12,6 +12,10 @@ const userBio = document.querySelector(".user-bio");
 const reposData = document.querySelector(".repos");
 const followersData = document.querySelector(".followers");
 const followingData = document.querySelector(".following");
+const locationData = document.querySelector(".location");
+const blogData = document.querySelector(".blog");
+const twitterData = document.querySelector(".twitter_username");
+const companyData = document.querySelector(".company");
 
 function formatDate(date) {
     const calendar = new Map([
@@ -37,6 +41,14 @@ function formatDate(date) {
     return (nameContainer.querySelector(".create-date").textContent = formattedDate);
 }
 
+function hasName(data) {
+    if (data.name === null) {
+        nameContainer.querySelector(".user-name").textContent = data.login;
+    } else {
+        nameContainer.querySelector(".user-name").textContent = data.name;
+    }
+}
+
 function checkBio(userbio) {
     if (userbio.bio === null || userbio.bio === "") {
         return (userBio.children[0].textContent = "This profile has no bio");
@@ -45,24 +57,51 @@ function checkBio(userbio) {
     }
 }
 
-//add an event listener to capture the user's input value when FORM is submitted
-//It's the form that's submitted, not the input
-formSearch.addEventListener("submit", (e) => {
-    e.preventDefault();
+function checkLocation(data, locationData) {
+    if (data.location === null) {
+        locationData.classList.add("empty");
+        return (locationData.children[1].textContent = "Not Available");
+    } else {
+        return (locationData.children[1].textContent = `${data.location}`);
+    }
+}
 
-    let searchResults = userInput.value.trim();
+function checkBlog(data, blogData) {
+    if (data.blog === "") {
+        blogData.classList.add("empty");
+        return (blogData.children[1].textContent = "Not Available");
+    } else {
+        return (blogData.children[1].textContent = `${data.blog}`);
+    }
+}
 
-    //use search results to complete your fetch API GET request
-    fetch(`https://api.github.com/users/${searchResults}`)
+function checkTwitter(data, twitterData) {
+    if (data.twitter_username === null) {
+        twitterData.classList.add("empty");
+        return (twitterData.children[1].textContent = "Not Available");
+    } else {
+        twitterData.classList.remove("empty");
+        return (twitterData.children[1].textContent = `${data.twitter_username}`);
+    }
+}
+
+function checkCompany(data, companyData) {
+    if (data.company === null) {
+        companyData.classList.add("empty");
+        return (companyData.children[1].textContent = "Not Available");
+    } else {
+        return (companyData.children[1].textContent = `${data.company}`);
+    }
+}
+
+//On first load, show the profile information for Octocat
+window.addEventListener("load", () => {
+    fetch(`https://api.github.com/users/octocat`)
         .then((response) => response.json())
         .then((data) => {
-            console.log(data);
+            userAvatar.innerHTML = `<img src="${data.avatar_url}" class="avatar" alt="github user profile image" />`;
 
-            userAvatar.innerHTML = `
-            <img src="${data.avatar_url}" class="avatar" alt="github user profile image" />
-            `;
-
-            nameContainer.querySelector(".user-name").textContent = data.name;
+            hasName(data);
             nameContainer.querySelector(".user-login").textContent = `@${data.login} `;
 
             formatDate(data);
@@ -71,8 +110,49 @@ formSearch.addEventListener("submit", (e) => {
             reposData.textContent = data.public_repos;
             followersData.textContent = data.followers;
             followingData.textContent = data.following;
+
+            checkLocation(data, locationData);
+            checkBlog(data, blogData);
+            checkTwitter(data, twitterData);
+            checkCompany(data, companyData);
         });
 });
 
-//check a function that checks if there's anything in the bio. if yes, append to <p>
-//if no, default string to "This profile has no bio"
+//add an event listener to capture the user's input value when FORM is submitted
+//It's the form that's submitted, not the input
+formSearch.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let searchResults = userInput.value.trim();
+    //use search results to complete your fetch API GET request
+    fetch(`https://api.github.com/users/${searchResults}`)
+        .then((response) => {
+            console.log(response);
+            if (!response.ok) {
+                throw Error("Something went wrong");
+            }
+            return response.json();
+        })
+        .then((data) => {
+            console.log(data);
+
+            userAvatar.innerHTML = `<img src="${data.avatar_url}" class="avatar" alt="github user profile image" />`;
+
+            hasName(data);
+            nameContainer.querySelector(".user-login").textContent = `@${data.login} `;
+
+            formatDate(data);
+            checkBio(data);
+
+            reposData.textContent = data.public_repos;
+            followersData.textContent = data.followers;
+            followingData.textContent = data.following;
+
+            checkLocation(data, locationData);
+            checkBlog(data, blogData);
+            checkTwitter(data, twitterData);
+            checkCompany(data, companyData);
+        })
+        .catch((err) => {
+            // formSearch.textContent = "No Results";
+        });
+});
