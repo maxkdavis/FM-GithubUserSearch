@@ -1,14 +1,18 @@
 //Github API: https://api.github.com/users/
-
 //Select the <form> search bar:
 const formSearch = document.getElementById("form-search");
+//Select the search area div
+const searchArea = document.getElementById("search-area");
 //Select the <input> inside the form
 const userInput = document.getElementById("username");
 //Image for the user avatar
 const userAvatar = document.querySelector(".avatar-container");
 const nameContainer = document.querySelector(".name");
 //div containing the user's bio
+const profile = document.getElementById("profile");
 const userBio = document.querySelector(".user-bio");
+const userStats = document.querySelector(".user-stats");
+const statLabels = document.querySelectorAll(".label");
 const reposData = document.querySelector(".repos");
 const followersData = document.querySelector(".followers");
 const followingData = document.querySelector(".following");
@@ -16,6 +20,29 @@ const locationData = document.querySelector(".location");
 const blogData = document.querySelector(".blog");
 const twitterData = document.querySelector(".twitter_username");
 const companyData = document.querySelector(".company");
+
+//theme toggler
+const themeIcon = document.querySelector(".theme-icon");
+
+themeIcon.onclick = function () {
+    document.body.classList.toggle("dark");
+    formSearch.classList.toggle("dark");
+    userInput.classList.toggle("dark");
+    profile.classList.toggle("dark");
+    userBio.children[0].classList.toggle("dark");
+    nameContainer.children[2].classList.toggle("dark");
+    userStats.classList.toggle("dark");
+
+    statLabels.forEach((el) => {
+        el.classList.toggle("dark");
+    });
+
+    if (document.body.classList.contains("dark")) {
+        themeIcon.src = "assets/icon-sun.svg";
+    } else {
+        themeIcon.src = "assets/icon-moon.svg";
+    }
+};
 
 function formatDate(date) {
     const calendar = new Map([
@@ -62,6 +89,7 @@ function checkLocation(data, locationData) {
         locationData.classList.add("empty");
         return (locationData.children[1].textContent = "Not Available");
     } else {
+        locationData.classList.remove("empty");
         return (locationData.children[1].textContent = `${data.location}`);
     }
 }
@@ -71,6 +99,7 @@ function checkBlog(data, blogData) {
         blogData.classList.add("empty");
         return (blogData.children[1].textContent = "Not Available");
     } else {
+        blogData.classList.remove("empty");
         return (blogData.children[1].textContent = `${data.blog}`);
     }
 }
@@ -90,6 +119,7 @@ function checkCompany(data, companyData) {
         companyData.classList.add("empty");
         return (companyData.children[1].textContent = "Not Available");
     } else {
+        companyData.classList.remove("empty");
         return (companyData.children[1].textContent = `${data.company}`);
     }
 }
@@ -123,6 +153,11 @@ window.addEventListener("load", () => {
 formSearch.addEventListener("submit", (e) => {
     e.preventDefault();
     let searchResults = userInput.value.trim();
+
+    if (searchResults === "") {
+        searchArea.children[1].classList.add("error");
+        document.getElementById("username").placeholder = "";
+    }
     //use search results to complete your fetch API GET request
     fetch(`https://api.github.com/users/${searchResults}`)
         .then((response) => {
@@ -133,8 +168,7 @@ formSearch.addEventListener("submit", (e) => {
             return response.json();
         })
         .then((data) => {
-            console.log(data);
-
+            searchArea.children[1].classList.remove("error");
             userAvatar.innerHTML = `<img src="${data.avatar_url}" class="avatar" alt="github user profile image" />`;
 
             hasName(data);
@@ -153,6 +187,7 @@ formSearch.addEventListener("submit", (e) => {
             checkCompany(data, companyData);
         })
         .catch((err) => {
-            // formSearch.textContent = "No Results";
+            searchArea.children[1].classList.add("error");
+            document.getElementById("username").placeholder = "";
         });
 });

@@ -20,9 +20,8 @@
 
     <div id="title-theme">
       <h1>devfinder</h1>
-      <div>
-        Light
-        Dark
+      <div class="theme-toggle">
+        <img class="theme-icon" src="assets/icon-moon.svg" alt="moon icon">
       </div>
     </div>
 
@@ -32,6 +31,7 @@
         <input type="text" id="username" placeholder="Search GitHub username..." autocomplete="off">
         <button>Search</button>
       </form>
+      <p>No Results</p>
     </div>
 
     <div id="profile">
@@ -52,17 +52,17 @@
 
       <div class="user-stats">
         <div class="stats">
-          <h4>Repos</h4>
+          <h4 class="label">Repos</h4>
           <p class="repos"></p>
         </div>
 
         <div class="stats">
-          <h4>Followers</h4>
+          <h4 class="label">Followers</h4>
           <p class="followers"></p>
         </div>
 
         <div class="stats">
-          <h4>Following</h4>
+          <h4 class="label">Following</h4>
           <p class="following"></p>
         </div>
 
@@ -71,19 +71,19 @@
       <div class="user-links">
         <div class="links location">
           <img src="assets/icon-location.svg" alt="pin location image">
-          <p></p>
+          <p class="label"></p>
         </div>
         <div class="links blog">
           <img src="assets/icon-website.svg" alt="blog link image">
-          <p></p>
+          <p class="label"></p>
         </div>
         <div class="links twitter_username">
           <img src="assets/icon-twitter.svg" alt="twitter logo">
-          <p></p>
+          <p class="label"></p>
         </div>
         <div class="links company">
           <img src="assets/icon-company.svg" alt="small building icon">
-          <p></p>
+          <p class="label"></p>
         </div>
       </div>
 

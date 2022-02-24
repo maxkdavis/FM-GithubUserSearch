@@ -52,6 +52,38 @@ body {
     margin-bottom: 2.25rem; /*36px*/
 }
 
+.theme-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.theme-toggle > img {
+    margin-left: 0.5rem;
+}
+
+.theme-toggle > p {
+    font-size: 13px;
+}
+
+#search-area {
+    position: relative;
+}
+
+#search-area > p {
+    color: hsla(0, 91%, 62%, 1);
+    font-size: 12px;
+    font-weight: 700;
+    position: absolute;
+    top: 19px;
+    right: 100px;
+    visibility: hidden;
+}
+
+#search-area > p.error {
+    visibility: visible;
+}
+
 #form-search {
     background-color: var(--clr-white);
     display: flex;
@@ -87,6 +119,7 @@ body {
     background-color: var(--clr-lightblue);
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 #profile {
@@ -156,6 +189,7 @@ body {
 }
 
 .stats h4 {
+    color: var(--ltmode-clr-navyblue);
     font-size: 0.6875rem;
     font-weight: 400;
 }
@@ -190,4 +224,49 @@ body {
 .links > p {
     font-size: 0.8125rem;
     color: var(--ltmode-clr-navyblue);
+}
+
+/****************DARK THEME********/
+body.dark {
+    background-color: var(--drkmode-clr-vdrkblue);
+    color: var(--clr-white);
+}
+
+#form-search.dark {
+    background-color: var(--drkmode-clr-drknavyblue);
+}
+
+input.dark {
+    background-color: var(--drkmode-clr-drknavyblue);
+    color: white;
+}
+
+#form-search input.dark::placeholder {
+    font-family: "Space Mono", monospace, sans-serif;
+    font-size: 13px;
+    color: #fff;
+}
+
+#profile.dark {
+    background-color: var(--drkmode-clr-drknavyblue);
+}
+
+p.create-date.dark {
+    color: #fff;
+}
+
+.user-bio > p.dark {
+    color: #fff;
+}
+
+.user-stats.dark {
+    background-color: var(--drkmode-clr-vdrkblue);
+}
+
+.stats h4.dark {
+    color: #fff;
+}
+
+.links p.dark {
+    color: #fff;
 }
