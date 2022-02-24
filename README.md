@@ -1,3 +1,25 @@
+# Github User Search App
+
+## Welcome! 👋🏻
+
+Thank you for viewing my solution to this Frontend Mentor coding challenge.
+
+## Screenshots
+
+<img width="413" alt="Screen Shot 2022-02-24 at 2 16 41 PM" src="https://user-images.githubusercontent.com/7098417/155602531-7595e81d-64b0-4c9f-ac37-65d6ecdb70be.png">
+
+<img width="630" alt="Screen Shot 2022-02-24 at 2 16 54 PM" src="https://user-images.githubusercontent.com/7098417/155602537-c120e105-4e0e-46c9-b4ce-8a4f0c734f20.png">
+
+<img width="811" alt="Screen Shot 2022-02-24 at 2 17 05 PM" src="https://user-images.githubusercontent.com/7098417/155602544-96d82e20-e526-4e1d-996a-78c11e817b98.png">
+
+## Links
+
+-   Here is the URL to my solution: Coming Soon!
+
+## My process
+
+I relied primarily on sematic HTML and CSS for styling (as well as Flexbox for most of the layout). I used Javascript's eventListener function in order to display a social-banner when the user clicks on the share icon.
+
 # Frontend Mentor - GitHub user search app
 
 ![Design preview for the GitHub user search app coding challenge](./preview.jpg)
@@ -31,7 +53,7 @@ The GitHub users API endpoint is `https://api.github.com/users/:username`. So, i
 
 -   If any of the location, website, twitter, or company properties are empty, show the text "Not Available" with transparency added (as shown in the design). ✅
 
--   Website, twitter, and company information should all be links to those resources. For the company link, it should remove the `@` symbol and link to the company page on GitHub. For Octocat, with `@github` being returned for the company, this would lead to a URL of `https://github.com/github`. ✅
+-   Website, twitter, and company information should all be links to those resources. For the company link, it should remove the `@` symbol and link to the company page on GitHub. For Octocat, with `@github` being returned for the company, this would lead to a URL of `https://github.com/github`.
 
 ## Where to find everything
 
