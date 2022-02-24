@@ -14,7 +14,7 @@ Thank you for viewing my solution to this Frontend Mentor coding challenge.
 
 ## Links
 
--   Live URL:
+-   Live URL: https://maxkdavis-github-usersearch.netlify.app/
 
 ## My process
 
