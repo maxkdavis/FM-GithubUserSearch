@@ -39,9 +39,9 @@ themeIcon.onclick = function () {
     });
 
     if (document.body.classList.contains("dark")) {
-        themeIcon.src = "assets/icon-sun.svg";
+        themeIcon.src = "start-code/assets/icon-sun.svg";
     } else {
-        themeIcon.src = "assets/icon-moon.svg";
+        themeIcon.src = "starter-code/assets/icon-moon.svg";
     }
 };
 
