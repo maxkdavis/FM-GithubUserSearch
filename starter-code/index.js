@@ -19,6 +19,7 @@ const followingData = document.querySelector(".following");
 const locationData = document.querySelector(".location");
 const blogData = document.querySelector(".blog");
 const twitterData = document.querySelector(".twitter_username");
+const twitterLink = document.querySelector(".twitter_link");
 const companyData = document.querySelector(".company");
 
 //theme toggler
@@ -100,6 +101,7 @@ function checkBlog(data, blogData) {
         return (blogData.children[1].textContent = "Not Available");
     } else {
         blogData.classList.remove("empty");
+        blogData.children[0].href = data.blog;
         return (blogData.children[1].textContent = `${data.blog}`);
     }
 }
@@ -110,6 +112,7 @@ function checkTwitter(data, twitterData) {
         return (twitterData.children[1].textContent = "Not Available");
     } else {
         twitterData.classList.remove("empty");
+        twitterData.children[0].href = `http://twitter.com/${data.twitter_username}`;
         return (twitterData.children[1].textContent = `${data.twitter_username}`);
     }
 }
@@ -120,6 +123,7 @@ function checkCompany(data, companyData) {
         return (companyData.children[1].textContent = "Not Available");
     } else {
         companyData.classList.remove("empty");
+        companyData.children[0].href = `https://github.com/${data.company.substring(1)}`;
         return (companyData.children[1].textContent = `${data.company}`);
     }
 }

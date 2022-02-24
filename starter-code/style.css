@@ -62,6 +62,10 @@ body {
     margin-left: 0.5rem;
 }
 
+.theme-toggle > img:hover {
+    cursor: pointer;
+}
+
 .theme-toggle > p {
     font-size: 13px;
 }
@@ -90,6 +94,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     height: 3.75rem; /*60px*/
+    padding: 5px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     margin-bottom: 1rem;
@@ -100,10 +105,22 @@ body {
 }
 
 #form-search input {
+    font-family: "Space Mono", monospace, sans-serif;
+    font-size: 13px;
     border: none;
     outline: none;
     padding: 0;
     width: 12.25rem; /*200px*/
+}
+
+#form-search,
+#form-search label:hover,
+#form-search input:hover {
+    cursor: pointer;
+}
+
+#form-search button:hover {
+    background-color: hsl(212, 100%, 69%);
 }
 
 #form-search input::placeholder {
@@ -214,8 +231,9 @@ body {
     opacity: 0.5;
 }
 
+.links > a,
 .links > img {
-    margin-right: 1rem;
+    margin-right: 0.5rem;
     width: 20px;
     height: 20px;
     object-fit: contain;
@@ -269,4 +287,73 @@ p.create-date.dark {
 
 .links p.dark {
     color: #fff;
+}
+
+/*MEDIA QUERIES TABLET*/
+@media (min-width: 768px) {
+    #container {
+        width: 36rem; /*576px*/
+    }
+
+    #form-search {
+        justify-content: flex-start;
+    }
+
+    #form-search > label {
+        margin-right: 1rem;
+    }
+
+    #form-search > button {
+        margin-left: auto;
+    }
+
+    .avatar-container {
+        width: 117px;
+        height: 117px;
+        margin-right: 2rem;
+    }
+
+    .name > h1 {
+        font-size: 26px;
+    }
+
+    .user-bio {
+        height: 50px;
+    }
+
+    .user-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*MEDIA QUERIES DESKTOP*/
+@media (min-width: 980px) {
+    #container {
+        width: 46rem; /*736px*/
+    }
+
+    .name > p.create-date {
+        position: absolute;
+        top: 5%;
+        right: 0;
+    }
+
+    .user-description {
+        position: relative;
+        margin-left: 0.5rem;
+        margin-bottom: 0;
+    }
+
+    .user-bio,
+    .user-stats,
+    .user-links {
+        width: 480px;
+        margin-left: auto;
+        margin-right: 3px;
+    }
+
+    .user-stats {
+        justify-content: space-around;
+    }
 }
