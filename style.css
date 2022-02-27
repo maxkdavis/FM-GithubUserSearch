@@ -107,8 +107,8 @@ img.theme-invisible {
     margin-bottom: 1rem;
 }
 
-#form-search label {
-    scale: 0.8;
+#form-search > label {
+    transform: scale(0.8);
     margin-right: 5px;
 }
 
