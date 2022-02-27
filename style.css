@@ -108,13 +108,13 @@ img.theme-invisible {
 }
 
 #form-search label {
-    scale: 0.75;
+    scale: 0.8;
     margin-right: 5px;
 }
 
 #form-search input {
     font-family: "Space Mono", monospace, sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     border: none;
     outline: none;
     padding: 0;
@@ -308,6 +308,7 @@ p.create-date.dark {
     }
 
     #form-search > label {
+        scale: 1;
         margin-right: 1rem;
         margin-left: 10px;
     }
