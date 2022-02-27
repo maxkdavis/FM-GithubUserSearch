@@ -6,11 +6,13 @@ Thank you for viewing my solution to this Frontend Mentor coding challenge.
 
 ## Screenshots
 
-<img width="413" alt="Screen Shot 2022-02-24 at 2 16 41 PM" src="https://user-images.githubusercontent.com/7098417/155602531-7595e81d-64b0-4c9f-ac37-65d6ecdb70be.png">
+<img width="419" alt="Screen Shot 2022-02-27 at 2 45 24 PM" src="https://user-images.githubusercontent.com/7098417/155899262-538477dd-4cc1-428f-9a47-2c08afcd5b48.png">
 
-<img width="630" alt="Screen Shot 2022-02-24 at 2 16 54 PM" src="https://user-images.githubusercontent.com/7098417/155602537-c120e105-4e0e-46c9-b4ce-8a4f0c734f20.png">
+<img width="399" alt="Screen Shot 2022-02-27 at 2 45 35 PM" src="https://user-images.githubusercontent.com/7098417/155899263-1670357f-f8d3-478d-b1d5-8f40889caee7.png">
 
-<img width="811" alt="Screen Shot 2022-02-24 at 2 17 05 PM" src="https://user-images.githubusercontent.com/7098417/155602544-96d82e20-e526-4e1d-996a-78c11e817b98.png">
+<img width="656" alt="Screen Shot 2022-02-27 at 2 45 47 PM" src="https://user-images.githubusercontent.com/7098417/155899265-bdf60623-3be7-4503-8863-f5493bef755e.png">
+
+<img width="840" alt="Screen Shot 2022-02-27 at 2 45 59 PM" src="https://user-images.githubusercontent.com/7098417/155899268-729d423c-9528-4e64-bed9-9f53b19f9551.png">
 
 ## Links
 
