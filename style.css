@@ -91,6 +91,8 @@ img.theme-invisible {
 
 #search-area > p.error {
     visibility: visible;
+    margin-top: 2px;
+    margin-right: 2px;
 }
 
 #form-search {
@@ -99,7 +101,7 @@ img.theme-invisible {
     justify-content: space-evenly;
     align-items: center;
     height: 3.75rem; /*60px*/
-    padding: 5px;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     margin-bottom: 1rem;
@@ -107,6 +109,7 @@ img.theme-invisible {
 
 #form-search label {
     scale: 0.75;
+    margin-right: 5px;
 }
 
 #form-search input {
@@ -130,7 +133,7 @@ img.theme-invisible {
 
 #form-search input::placeholder {
     font-family: "Space Mono", monospace, sans-serif;
-    font-size: 13px;
+    font-size: 11px;
     color: var(--ltmode-clr-navyblue);
 }
 
@@ -306,10 +309,19 @@ p.create-date.dark {
 
     #form-search > label {
         margin-right: 1rem;
+        margin-left: 10px;
     }
 
     #form-search > button {
         margin-left: auto;
+    }
+
+    #form-search input {
+        width: 16.25rem;
+    }
+
+    #form-search input::placeholder {
+        font-size: 1rem;
     }
 
     .avatar-container {
