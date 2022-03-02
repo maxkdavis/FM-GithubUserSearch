@@ -153,7 +153,6 @@ window.addEventListener("load", () => {
 });
 
 //add an event listener to capture the user's input value when FORM is submitted
-//It's the form that's submitted, not the input
 formSearch.addEventListener("submit", (e) => {
     e.preventDefault();
     let searchResults = userInput.value.trim();
