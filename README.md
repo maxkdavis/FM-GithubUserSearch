@@ -1,4 +1,7 @@
-# Github User Search App
+# 🔎 Github User Search App
+
+![GitHub last commit](https://img.shields.io/github/last-commit/maxkdavis/github-user-search)
+
 
 ## Welcome! 👋🏻
 
