@@ -5,7 +5,7 @@
 ## Quickly lookup and explore Github users
 [Devfinder](https://maxkdavis-github-user-finder.netlify.app/) is a web app for retrieving and visualizing GitHub user data. Enter a GitHub username into the search bar and view their profile information as well as links to their Twitter homepage, personal website, and blog posts!  
 
-![Image of Devfinder App](https://user-images.githubusercontent.com/7098417/155899262-538477dd-4cc1-428f-9a47-2c08afcd5b48.png)
+<img src="https://user-images.githubusercontent.com/7098417/155899262-538477dd-4cc1-428f-9a47-2c08afcd5b48.png" width="400" height="600" />
 
 ### Links
 - See live demo of [Devfinder](https://maxkdavis-github-user-finder.netlify.app/)
